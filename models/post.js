@@ -1,39 +1,23 @@
 const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema({
-  id: {
+  name: {
     type: String,
     required: true,
     trim: true,
   },
-  baslik: {
+  description: {
     type: String,
     required: true,
     trim: true,
   },
-  açıklama: {
-    type: String,
-    required: true,
-    trim: true,
+  stock: {
+    type: Number,
+    default: 0,
   },
-  malzemeler: {
-    type: [String],
-    required: true,
-  },
-  hazirlanisi: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  resim: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  url: {
-    type: String,
-    required: true,
-    trim: true,
+  date: {
+    type: Date,
+    default: new Date(),
   },
 });
 
